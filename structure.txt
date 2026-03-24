@@ -1,0 +1,62 @@
+.
+├── AGENTS.md
+├── CLAUDE.md
+├── README.md
+├── app
+│   ├── Home.css
+│   ├── HomeClient.tsx
+│   ├── about
+│   │   ├── About.css
+│   │   ├── AboutClient.tsx
+│   │   └── page.tsx
+│   ├── contact
+│   │   ├── Contact.css
+│   │   ├── ContactClient.tsx
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── fluids
+│   │   ├── Fluids.css
+│   │   ├── FluidsClient.tsx
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── robots.ts
+│   ├── services
+│   │   ├── Services.css
+│   │   ├── ServicesClient.tsx
+│   │   └── page.tsx
+│   └── sitemap.ts
+├── components
+│   ├── ClientWrapper.tsx
+│   ├── Cursor.tsx
+│   ├── Footer.tsx
+│   ├── LogoBand.tsx
+│   ├── Nav.tsx
+│   └── Preloader.tsx
+├── eslint.config.mjs
+├── lib
+│   ├── gsap.ts
+│   └── lenis.ts
+├── next-env.d.ts
+├── next.config.ts
+├── node_modules
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── assets
+│   │   ├── about-industry.jpg
+│   │   ├── about-industry.webp
+│   │   ├── eau.webp
+│   │   ├── jalel-tayechi.jpg
+│   │   ├── jaleltay.jpeg
+│   │   ├── vapeur.jpeg
+│   │   └── vapeur.jpg
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── structure.txt
+└── tsconfig.json
