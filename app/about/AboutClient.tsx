@@ -153,31 +153,31 @@ export default function AboutClient() {
       </section>
 
       {/* ── TEAM ── */}
-      <section className="about-team">
-        <div className="about-pg-container">
-          <div className="section-lbl" style={{ marginBottom: 56 }}>Direction Technique</div>
-          <div className="team-card team-card-v2">
-            <div className="tc-photo-wrap">
-              <Image
-                src="/assets/jaleltay.jpeg"
-                alt="Jalel Tayechi – Directeur Technique, GMI Tunisie"
-                fill
-                sizes="(max-width: 640px) 100vw, 280px"
-                style={{ objectFit: 'cover', objectPosition: 'top center' }}
-              />
-            </div>
-            <div className="tc-info">
-              <h4 className="tc-name">Jalel Tayechi</h4>
-              <p className="tc-role">Directeur Technique</p>
-              <p className="tc-desc">Expert en ingénierie industrielle avec une expertise approfondie dans les systèmes de fluides, de chauffe et les réseaux industriels complexes.</p>
-              <div className="tc-links">
-                <a href="tel:+21650263806">+216 50 26 38 06</a>
-                <a href="mailto:societegmi@gmail.com">societegmi@gmail.com</a>
-              </div>
-            </div>
-          </div>
+<section className="about-team">
+  <div className="about-pg-container">
+    <div className="section-lbl" style={{ marginBottom: 56 }}>Direction Technique</div>
+    <div className="team-card-v2">
+      <div className="tc-photo-wrap">
+        <Image
+          src="/assets/jaleltay.jpeg"
+          alt="Jalel Tayechi – Directeur Technique, GMI Tunisie"
+          fill
+          sizes="(max-width: 640px) 100vw, 280px"
+          style={{ objectFit: 'cover', objectPosition: 'top center' }}
+        />
+      </div>
+      <div className="tc-info">
+        <h4 className="tc-name">Jalel Tayechi</h4>
+        <p className="tc-role">Directeur Technique</p>
+        <p className="tc-desc">Expert en ingénierie industrielle avec une expertise approfondie dans les systèmes de fluides, de chauffe et les réseaux industriels complexes.</p>
+        <div className="tc-links">
+          <a href="tel:+21650263806">+216 50 26 38 06</a>
+          <a href="mailto:societegmi@gmail.com">societegmi@gmail.com</a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </div>

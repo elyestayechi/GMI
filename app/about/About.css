@@ -59,14 +59,6 @@
 .tc-links a { font-size: 14px; color: var(--ink2); border-bottom: 1px solid rgba(20,18,16,.15); padding-bottom: 2px; display: inline-block; transition: color .25s, border-color .25s; }
 .tc-links a:hover { color: var(--red); border-color: var(--red); }
 
-@media (max-width: 960px) {
-  .about-history, .big-quote-section, .about-entities, .about-values, .about-team { padding-left: 28px; padding-right: 28px; }
-  .about-pg-inner { grid-template-columns: 1fr; gap: 40px; }
-  .entities-grid  { grid-template-columns: 1fr; }
-  .values-grid    { grid-template-columns: 1fr 1fr; }
-  .value-item:nth-child(even) { border-right: none; }
-}
-
 /* ── Team Card V2 with photo ── */
 .team-card-v2 {
   display: grid;
@@ -74,10 +66,20 @@
   gap: 0;
   background: var(--paper);
   overflow: hidden;
+  border: 1px solid var(--line);
+  transition: all 0.4s ease;
+}
+
+.team-card-v2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: var(--red);
 }
 
 @media (max-width: 640px) {
-  .team-card-v2 { grid-template-columns: 1fr; }
+  .team-card-v2 { 
+    grid-template-columns: 1fr;
+  }
 }
 
 .tc-photo-wrap {
@@ -91,4 +93,74 @@
 .tc-photo-wrap img {
   object-fit: cover;
   object-position: top center;
+}
+
+/* This is the key change - increased padding for text box */
+.tc-info {
+  padding: 48px 56px 48px 56px;
+}
+
+.tc-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.tc-role {
+  font-family: 'Syne Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 20px;
+}
+
+.tc-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+.tc-links {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.tc-links a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.25s;
+  border-bottom: 1px solid rgba(20,18,16,.15);
+  padding-bottom: 4px;
+}
+
+.tc-links a:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
+/* Responsive adjustments for tablet */
+@media (max-width: 960px) {
+  .tc-info {
+    padding: 40px 40px 40px 40px;
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 640px) {
+  .tc-info {
+    padding: 32px 32px 32px 32px;
+  }
 }
