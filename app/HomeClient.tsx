@@ -251,9 +251,6 @@ export default function HomeClient() {
       </div>
     ))}
   </div>
-  <div className="fl-footer">
-    <Link href="/fluids" className="text-link">Voir tous les fluides <span>→</span></Link>
-  </div>
 </section>
 
       {/* ── CONTACT ── */}
