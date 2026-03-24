@@ -11,6 +11,25 @@ export default function Cursor() {
   const raf     = useRef<number>(0)
 
   useEffect(() => {
+    // Check if device is touch-enabled (tablet or mobile)
+    const isTouchDevice = () => {
+      return (('ontouchstart' in window) ||
+         (navigator.maxTouchPoints > 0) ||
+         ('msMaxTouchPoints' in navigator && (navigator as any)['msMaxTouchPoints'] > 0))
+    }
+
+    // Check screen width for tablet/mobile breakpoints
+    const isMobileOrTablet = () => {
+      return window.innerWidth <= 1024 || isTouchDevice()
+    }
+
+    // If on mobile/tablet, don't initialize custom cursor
+    if (isMobileOrTablet()) {
+      // Add class to body to hide custom cursor styles
+      document.body.classList.add('hide-custom-cursor')
+      return
+    }
+
     const dot  = dotRef.current!
     const ring = ringRef.current!
 
@@ -41,12 +60,32 @@ export default function Cursor() {
     const obs = new MutationObserver(attach)
     obs.observe(document.body, { childList: true, subtree: true })
 
+    // Handle resize events to re-check if we're on mobile/tablet
+    const handleResize = () => {
+      if (window.innerWidth <= 1024) {
+        // Clean up and hide cursor
+        document.removeEventListener('mousemove', onMove)
+        cancelAnimationFrame(raf.current)
+        obs.disconnect()
+        document.body.classList.add('hide-custom-cursor')
+      }
+    }
+    window.addEventListener('resize', handleResize)
+
     return () => {
       document.removeEventListener('mousemove', onMove)
       cancelAnimationFrame(raf.current)
       obs.disconnect()
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  // Only render the cursor elements if not on mobile/tablet
+  if (typeof window !== 'undefined' && (window.innerWidth <= 1024 || 
+      ('ontouchstart' in window) || 
+      (navigator.maxTouchPoints > 0))) {
+    return null
+  }
 
   return (
     <>

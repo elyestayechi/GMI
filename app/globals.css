@@ -618,3 +618,32 @@ body.menu-open .menu-inner { pointer-events: all; }
     gap: 28px;
   }
 }
+
+/* ─── HIDE CUSTOM CURSOR ON TABLET/MOBILE ─── */
+@media (max-width: 1024px) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+  
+  body.hide-custom-cursor,
+  body.hide-custom-cursor * {
+    cursor: auto !important;
+  }
+}
+
+/* Also hide on any touch-enabled device */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+  
+  body {
+    cursor: auto !important;
+  }
+}

@@ -9,7 +9,7 @@ import { stopLenis, startLenis } from '@/lib/lenis'
 const LINKS = [
   { idx: '01', label: 'Accueil',  to: '/' },
   { idx: '02', label: 'À Propos', to: '/about' },
-  { idx: '03', label: 'Réseaux',  to: '/fluids' },
+  { idx: '03', label: 'Services', to: '/services' },
   { idx: '04', label: 'Contact',  to: '/contact' },
 ]
 
